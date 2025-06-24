@@ -1,0 +1,273 @@
+.about-section {
+  padding: 150px 5vw 80px;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #e0e0e0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-top: 2px solid #00bfff33;
+}
+
+.ab {
+  color: #00bfff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-text-container {
+  flex: 1 1 60%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 191, 255, 0.1);
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #a7b1b6;
+}
+
+/* Education Section */
+.education-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+
+.education-table {
+  display: grid;
+  gap: 20px;
+}
+
+.edu-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 18px;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 191, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.edu-row:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.2);
+}
+
+.edu-row.header {
+  font-weight: bold;
+  font-size: 1.15rem;
+  background-color: #262626;
+  color: #a8446c;
+}
+
+/* Profile Image */
+.about-image-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  padding-bottom: 120px;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0f0f0f;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6);
+}
+
+.ring {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 220px;
+  height: 220px;
+  border: 3px dashed #00bfff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+  z-index: 1;
+  filter: drop-shadow(0 0 8px #00bfff);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Typewriter Effect */
+.typewriter-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: visible;
+  border-right: 2px solid #00bfff;
+  animation: blink 0.75s step-end infinite;
+  background: linear-gradient(90deg, #00bfff, #a8446c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  width: max-content;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00bfff;
+  }
+}
+
+/* Button */
+.contact-button {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 24px;
+  background: #00bfff;
+  color: #0f0f0f;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  background: #a8446c;
+  color: #fff;
+  box-shadow: 0 0 10px #a8446c;
+}
+
+/* LeetCode Section */
+.leetcode-section {
+  margin-top: 3rem;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.leetcode-section h3 {
+  color: #00bfff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.leetcode-card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leetcode-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 191, 255, 0.5);
+}
+
+.leetcode-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #00bfff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.leetcode-link:hover {
+  color: #a8446c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text-container {
+    flex: 1 1 100%;
+  }
+
+  .about-image-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .edu-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .edu-row.header {
+    display: none;
+  }
+
+  .leetcode-card {
+    max-width: 90%;
+  }
+}
+.resume-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  display: flex;
+  align-items: center;
+  background-color: #cfcfaa;
+  color: rgb(17, 18, 14);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  
+}
+
+.resume-btn:hover {
+  background-color: #5ab3d3;
+    color: rgb(17, 18, 14);
+
+  
+}
